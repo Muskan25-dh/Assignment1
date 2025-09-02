@@ -1,0 +1,40 @@
+<div class="chat-container">
+  <h1>Group Chat</h1>
+
+  <!-- Join / Room Section -->
+  <div *ngIf="!joined()">
+    <input [(ngModel)]="room" placeholder="Enter room name" />
+    <button (click)="joinRoom()">Join Room</button>
+  </div>
+
+  <!-- Chat Section -->
+  <div *ngIf="joined()">
+    <h2>Room: {{ room }}</h2>
+    <h3>You are logged in as: [{{ role }}] {{ username }}</h3>
+
+    <!-- Messages -->
+    <div class="messages">
+      <div *ngFor="let msg of messages()">{{ msg }}</div>
+    </div>
+
+    <!-- Send message -->
+    <input [(ngModel)]="messageOut" placeholder="Type your message..." />
+    <button (click)="send()">Send</button>
+
+    <!-- Member List -->
+    <h3>Members:</h3>
+<ul>
+  <li *ngFor="let m of members()">
+    [{{ m.role }}] {{ m.username }}
+    <!-- Kick button -->
+    <button 
+      *ngIf="role === 'superadmin' || (role === 'groupadmin' && m.role !== 'superadmin' && m.username !== username)"
+      (click)="kickMember(m.id)">
+      Kick
+    </button>
+  </li>
+</ul>
+
+
+  </div>
+</div>

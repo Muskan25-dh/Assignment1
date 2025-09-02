@@ -1,0 +1,33 @@
+[
+    {
+        "email": "abc@com.au",
+        "pwd": "123456yhgfr34567uhgfvder",
+        "id": "1",
+        "username":"abc",
+        "avatar":""
+    },
+
+    {
+        "email": "edffe@com.au",
+        "pwd": "13456",
+        "id": "2",
+        "username":"edf",
+        "avatar":""
+    },
+
+    {
+        "email": "hello@com.au",
+        "pwd": "1234",
+        "id": "3",
+        "username":"hello",
+        "avatar":""
+    },
+
+    {
+        "email": "bye@com.au",
+        "pwd": "er33243@jformd",
+        "id": "4",
+        "username":"bye",
+        "avatar":""
+    }
+]
