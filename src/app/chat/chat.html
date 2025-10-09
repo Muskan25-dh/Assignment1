@@ -1,0 +1,41 @@
+<div class="chat-container">
+  <h3>Room: {{ roomName }}</h3>
+  <p>You are logged in as: [{{ role }}]</p>
+
+  <div class="message-input">
+    <input type="text" [(ngModel)]="newMessage" placeholder="Type your message..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+
+
+  <div class="image-upload">
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+    <button (click)="sendImage()" [disabled]="!selectedFile">Upload Image</button>
+  </div>
+
+  
+  <h4>Members:</h4>
+  <ul class="members-list">
+    <li *ngFor="let member of members">
+      {{ member.username || 'Guest' }} [{{ member.role || 'user' }}]
+
+      <button *ngIf="role === 'superadmin' || role === 'groupadmin'" 
+              (click)="kickMember(member)">
+        Kick
+      </button>
+
+      <button *ngIf="role === 'superadmin' && member.role !== 'superadmin'" 
+              (click)="promoteMember(member)">
+        Promote
+      </button>
+    </li>
+  </ul>
+
+  
+  <h4>Messages:</h4>
+  <ul>
+    <li *ngFor="let msg of messages">
+      <span [innerHTML]="msg"></span>
+    </li>
+  </ul>
+</div>
