@@ -1,33 +1,8 @@
 [
-    {
-        "email": "abc@com.au",
-        "pwd": "123456yhgfr34567uhgfvder",
-        "id": "1",
-        "username":"abc",
-        "avatar":""
-    },
-
-    {
-        "email": "edffe@com.au",
-        "pwd": "13456",
-        "id": "2",
-        "username":"edf",
-        "avatar":""
-    },
-
-    {
-        "email": "hello@com.au",
-        "pwd": "1234",
-        "id": "3",
-        "username":"hello",
-        "avatar":""
-    },
-
-    {
-        "email": "bye@com.au",
-        "pwd": "er33243@jformd",
-        "id": "4",
-        "username":"bye",
-        "avatar":""
-    }
+  { "id": 1, "name": "Alex", "email": "alex@g.com", "password": "Alex123", "role": "superadmin" },
+  { "id": 2, "name": "Simran", "email": "simran@g.com", "password": "Simran123", "role": "user" },
+  { "id": 3, "name": "Jordan", "email": "jordan@g.com", "password": "Jordan123", "role": "user" },
+  { "id": 4, "name": "Priya", "email": "priya@g.com", "password": "Priya123", "role": "groupadmin" },
+  { "id": 5, "name": "Ravi", "email": "ravi@g.com", "password": "Ravi123", "role": "user" },
+  { "id": 6, "name": "Maya", "email": "maya@g.com", "password": "Maya123", "role": "groupadmin" }
 ]
